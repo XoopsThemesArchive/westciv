@@ -1,0 +1,708 @@
+/*-- 
+ * Theme Name: xoops-right
+ * Creator: phppp (D.J.): http://xoopsforge.com; http://xoops.org.cn 
+ * Credits: The theme is originated from westciv: http://www.westciv.com/
+--*/
+
+/* 全站缺省参数 */
+body {
+	font-size: 				100%; /* 字体大小 */
+	font-family: 			Arial, Verdana, Helvetica, Arial, sans-serif;  /* 字体类型，可以加入需要的中文字体 */
+	margin: 				0; 
+	padding: 				0;
+	background-color: 		#fff;  /* 背景颜色 */
+	/*
+	background-image: 		url(./images/bg.png);
+	*/  					/* 背景图片 */
+	/*
+	background-repeat: 		no-repeat;
+	*/
+	background-attachment: 	fixed;
+}
+
+table{
+	border-collapse:		collapse;
+	width: 					100%;   /* table宽度，防止某些未设定宽度的table不一致 */
+}
+
+/* 页面顶部参数 */
+#xoops-header {
+	width: 					100%; 
+	z-index: 				0;
+	float: 					left;
+	border-bottom: 			1px #ff5800 solid;
+	margin-bottom: 			10px; 
+}
+
+#xoops-header {
+	background-color: 		#091c5a;
+	/*
+	background-image: 		url(images/banner.gif);
+	*/
+	background-repeat: 		no-repeat;
+	background-attachment: 	fixed;
+}
+
+#xoops-header div.xoops-logo {
+	padding-left: 			20px;
+	padding-bottom: 		22px;
+	padding-top: 			12px;
+	color: 					#fff;
+}
+
+#xoops-header span.xoops-sitename {
+	padding-left: 			10px;
+	padding-bottom: 		12px;
+	font-size: 				180%;
+	font-weight: 			bold;
+	font-family: 			Georgia, Helvetica;
+}
+	
+#xoops-header span.xoops-slogan {
+	padding-left: 			30px;
+	padding-top: 			2px;
+	font-size: 				80%;
+	color: 					#aaa;
+	padding-bottom: 		12px;
+}
+
+#xoops-header a span {
+	position: 				fixed;
+	left: 					15px;
+	top: 					6px ;
+	width: 					61px;
+	height: 				54px;
+	z-index: 				1;			
+}
+
+#xoops-meta-nav {
+	position: 				absolute;
+	top: 					2px;
+	right: 					6px;
+	width: 					120px;
+	border: 				0;
+	padding: 				5px; 
+}
+
+#xoops-meta-nav ul {
+	margin: 				0;
+	padding: 				0; 
+}
+
+#xoops-meta-nav {
+	font-size: 				80%;
+	background-color: 		transparent ;
+	text-align: 			right;
+	color: 					#fff; 
+}
+
+#xoops-meta-nav ul li {
+	list-style-type: 		none; 
+}
+
+#xoops-meta-nav ul li a:link, 
+#xoops-meta-nav ul li a:visited {
+	text-decoration: 		none;
+	color: 					#eee; 
+}
+
+#xoops-meta-nav ul li a:hover {
+	text-decoration: 		underline; 
+}
+
+#xoops-header ul.xoops-site-nav {
+	margin:					0;
+	padding: 				1px 0 0 15px;
+	width: 					718px;
+	margin-left: 			auto;
+	margin-right: 			auto; 
+}
+
+#xoops-header ul.xoops-site-nav {
+	font-weight: 			bold;
+	font-size: 				80%;
+	text-transform: 		uppercase; 
+}
+
+#xoops-header ul.xoops-site-nav li {
+	float:					left;
+	list-style-type:		none; 
+}
+
+#xoops-header ul.xoops-site-nav a {
+	display:				block;
+	float:					left;
+	border-top:				1px solid #091c5a;
+	border-left:			1px solid #091c5a;
+	border-right:			1px solid #091c5a;
+	padding:				4px 8px;
+	text-decoration:		none;
+	margin-top: 			0;
+	margin-left: 			5px;
+	margin-bottom: 			0;
+	margin-right: 			0;
+	color: 					#fff;
+	background-color: 		#6882ab; 
+}
+
+#xoops-header ul.xoops-site-nav a:hover, 
+#xoops-header ul a.current {
+	color: 					#fff;
+	background-color: 		#ff5800; 
+}
+
+#xoops-content {
+	position: 				relative;
+	font-size: 				90%;
+	clear: 					both;
+	width: 					779px;
+	margin-left: 			auto;
+	margin-right: 			auto;
+	z-index: 				2;
+	margin-bottom: 			0; 
+}
+
+#xoops-maintext{
+	border: 				1px #b0b1ba solid;
+	margin-left: 			0;
+	margin-right: 			0;
+	width: 					100%;
+}
+
+#xoops-sidebar {
+	width: 					0;
+	height: 				0;
+}
+
+#xoops-maintext, 
+#xoops-sidebar{
+	background-color: 		#fff;
+	/* disable background image */
+	color: 					#3e3e3e; 
+}
+ 
+.xoops-main-side #xoops-maintext, 
+.xoops-main-side #xoops-footer{
+	width: 					566px;
+} 
+
+.xoops-main-side #xoops-sidebar {
+	position: 				absolute;
+	top: 					0;
+	left: 					579px;
+	width: 					200px;
+	height: 				100%;
+	overflow: 				hidden;
+	margin-left: 			0;
+	margin-right: 			0;
+}
+
+.xoops-sidebar-nav {
+	border: 				1px #b0b1ba solid;
+	margin-bottom: 			10px;
+}
+
+.xoops-sidebar-nav ul {
+	padding: 				0;
+	margin: 				0; 
+}
+
+.xoops-sidebar-nav ul li {
+	list-style-type: 		none;
+	margin-top: 			4px;
+	margin-bottom: 			4px;
+}
+
+.xoops-sidebar-nav ul li a:link, 
+.xoops-sidebar-nav ul li a:visited {
+	text-decoration: 		none;
+	padding-left: 			2px;
+	border-left: 			10px #fff solid;
+	color: 					#091c5a; 
+}
+
+.xoops-sidebar-nav ul li a:hover {
+	border-left: 			10px #ff5800 solid;
+	color: 					#fb5701; 
+}
+
+a:link, a:visited {
+	color: 					#091c5a; 
+	text-decoration: 		none;
+}
+
+/*
+#xoops-maintext a:visited {
+	color: 					#6c6c6c;
+	text-decoration: 		none; 
+}
+*/
+
+#xoops-maintext a:hover {
+	/*
+	background-color: 		#6882ab;
+	color: 					#fff;
+	*/
+	border-bottom: 			2px #6882ab dotted;
+	text-decoration: 		none;
+}
+
+#xoops-sidebar a:hover {
+	color: 					#ff5800;
+	text-decoration: 		none;
+}
+
+#xoops-maintext p, 
+#xoops-maintext ul, 
+#xoops-maintext ol {
+	line-height: 			1.5em;
+	margin-bottom: 			15px;
+	margin-top: 			0; 
+}
+
+#xoops-maintext table ul {
+	font-size: 				inherit; 
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+	color: 					#6882ab;
+	font-weight: 			bold;
+	font-style: 			normal;
+	text-decoration: 		none;
+	text-transform: 		uppercase; 
+}
+
+h1 {
+	font-size: 				150%;
+}
+
+h2 {
+	font-size: 				130%;
+}
+
+h3 {
+	font-size: 				120%;
+}
+
+h4 {
+	font-size: 				100%;
+}
+
+h5 {
+	font-size: 				90%;
+	text-decoration: 		underline; 
+}
+
+h6 {
+	font-size: 				80%;
+	font-style: 			italic; 
+}
+
+a img {
+	border: 				none; 
+}
+
+table {
+	line-height: 			1.2em;
+	border-collapse: 		collapse; 
+}
+
+td {
+}
+
+th {
+	text-align: 			left;
+	color: 					#f3f1f4;
+	background-color: 		#bebebe; 
+}
+
+div.blockcontent th{
+	color: 					#000;
+	background-color: 		#fff;
+	font-weight: 			bold;
+	border-bottom: 			1px solid #bebebe;
+}
+
+
+#xoops-footer #foot-body {
+	font-size: 				80%;
+	text-align: 			center;
+	background-color: 		#091c5a;
+	color: 					#fff;
+}
+
+#xoops-footer #foot-body a:link, 
+#xoops-footer #foot-body a:visited {
+	color: 					#fff;
+	text-decoration: 		none; 
+}
+
+#xoops-footer #foot-body a:hover {
+	text-decoration: 		underline; 
+}
+
+#xoops-footer #foot-footer {
+	font-size: 				90%;
+	text-align: 			right;
+}
+
+#xoops-footer #foot-footer a:link, 
+#xoops-footer #foot-footer a:visited {
+	background-color: 		#091c5a;
+	color: 					#fff;
+	text-decoration: 		none;
+}
+
+#xoops-footer #foot-footer a:hover {
+	background-color: 		#ff5800;
+	color: 					#fff;
+} 
+
+acronym { 
+	cursor: help; 
+}
+
+
+.item {
+}
+
+.itemHead {
+	font-size: 				110%;
+	border-bottom:			1px solid #99B5CC;
+	line-height: 			120%;
+}
+	
+.itemTitle {
+	line-height: 			120%;
+}
+
+.itemTitle a {
+	background-color: 		transparent;
+}
+
+.itemTitle a:hover {
+}
+
+.itemInfo {
+	text-align: 			right;
+	padding: 				3px;
+}
+
+.itemPoster {
+	font-size: 				80%;
+	font-style:				italic;
+	padding: 				5px;
+}
+
+.itemPosate {
+	font-size: 				90%;
+	font-style:				italic;
+}
+	
+.itemStats {
+	font-size: 				90%;
+	font-style:				italic;
+}
+	
+.itemBody {
+	padding-left: 			5px;
+}
+	
+.itemText {
+	margin-top: 			5px;
+	margin-bottom: 			5px;
+	line-height: 			1.5em;
+}
+	
+.itemText:first-letter {
+	font-size: 				133%;
+	font-weight: 			bold;
+}
+	
+.itemFoot {
+	text-align: 			right;
+	padding: 				3px;
+}
+	
+.itemAdminLink {
+	font-size: 				90%;
+}
+	
+.itemPermaLink {
+	font-size: 				90%;
+}
+
+.outer { 
+}
+	
+.head, .head a, 
+.head a:visited {
+	font-weight: 			bold;
+}
+	
+.even {
+	background-color: 		#eee; 
+}
+	
+.odd {
+	background-color: 		#F7F7F7; 
+}
+
+div.errorMsg {
+	background-color: 		#FFCCCC;
+	text-align: 			center;
+	border-top: 			1px solid #DDDDFF;
+	border-left: 			1px solid #DDDDFF;
+	border-right: 			1px solid #AAAAAA;
+	border-bottom: 			1px solid #AAAAAA;
+	font-weight: 			bold;
+	padding: 				10px;
+}
+	
+div.confirmMsg {
+	background-color: 		#DDFFDF;
+	color: 					#136C99;
+	text-align: 			center;
+	border-top: 			1px solid #DDDDFF;
+	border-left: 			1px solid #DDDDFF;
+	border-right: 			1px solid #AAAAAA;
+	border-bottom: 			1px solid #AAAAAA;
+	font-weight: 			bold;
+	padding: 				10px;
+}
+	
+div.resultMsg {
+	background-color: 		#CCCCCC;
+	color: 					#333333;
+	text-align: 			center;
+	border-top: 			1px solid silver;
+	border-left: 			1px solid silver;
+	font-weight: 			bold;
+	border-right: 			1px solid #666666;
+	border-bottom: 			1px solid #666666;
+	padding: 				10px;
+}
+	
+div.xoopsCode {
+	color: 					#0D3F72;
+	background: 			#FCFCFC;
+	border: 				1px #b0b1ba solid;
+	font-family: 			Arial, Courier,monospace;
+	width: 					500px;
+	height: 				200px;
+	margin: 				0.5em;
+	overflow: 				auto;
+	padding: 				3px;
+}
+
+html>body div.xoopsCode {
+    width:					95%;
+    height:					auto;
+    max-height:				250px;
+	padding-bottom: 		30px;
+}
+	
+div.comText > div.xoopsCode {
+	width:					95%;
+}
+
+div.xoopsQuote {
+	color: 					#0D3F72;
+	font-family: 			Arial, Courier, monospace;
+	border: 				1px #b0b1ba solid;
+	padding: 				0px;
+	background-color: 		#f2f2f2; 
+}
+
+.comTitle {
+	font-weight: 			bold;
+	padding: 				5px;
+}
+
+.comText {
+	vertical-align: 		top;
+	margin-top: 			5px;
+	padding: 				2px;
+}
+
+.comUserStat {
+	margin: 				2px;
+	border: 				solid 1px #FFFFFF;
+}
+	
+.comUserStatus {
+	margin-bottom: 			5px;
+}
+	
+.comUserStatCaption {
+	font-weight: 			normal;
+}
+	
+.comUserRank {
+	margin: 				2px;
+}
+	
+.comUserRankText {
+	font-weight:			bold;
+	margin: 				5px;
+}
+	
+.comUserRankImg {
+	border: 				0px;
+}
+	
+.comUserName {}
+.comUserImg {
+	margin: 				2px;
+}
+	
+.comDate {
+	border: 				solid 1px #FFFFFF;
+	margin: 				2px;
+}
+.comDateCaption {
+	font-size: 				90%;
+}
+
+#mainmenu a{
+	font-size: 				110%;
+}
+
+#mainmenu a:link, 
+#mainmenu a:visited{
+	padding-left: 			2px;
+	border-left: 			10px #fff solid;
+	border-bottom: 			1px #fff solid;
+	color: 					#091c5a; 
+}
+
+#mainmenu a.menuTop {
+	display:				none;
+}
+#mainmenu a.menuSub {
+	padding-left: 			25px;
+}
+#mainmenu a:hover {
+	border-left: 			10px #ff5800 solid;
+	border-bottom: 			1px #ff5800 solid;
+	color: 					#fb5701; 
+}
+
+div.xoops-contents, 
+div.blockcontent {
+	padding-left: 			5px;
+	padding-right: 			5px;
+	padding-bottom: 		10px;
+}
+
+
+div.blocktitle {
+	margin-top: 			0;
+	margin-bottom: 			5px;
+	border-bottom: 			1px #b0b1ba solid;
+	font-weight: 			bold;
+	color: 					#fff;
+	text-shadow: 			none;
+	padding-top: 			6px;
+	padding-bottom: 		6px;
+	background-color: 		#6882ab; 
+}
+
+#xoops-sidebar div.blocktitle {
+	text-align: 			right;
+	padding-right: 			15px;
+}
+
+#xoops-sidebar #leftcolumn div.blocktitle {
+	background-color: 		#ff5800;
+}
+
+
+#xoops-maintext div.blocktitle{
+	padding-left: 			20px;
+	padding-right: 			20px;
+	margin-bottom: 			15px;
+	/*
+	background-color: 		#6882ab; 
+	*/
+}
+
+#xoops-maintext div.xoops-contents table td{
+	vertical-align: 		top;
+	padding-top: 			5px;
+}
+
+.head{
+	background-color: 		#f2f2f2;
+	color: 					#333;
+	border-bottom: 			1px #b0b1ba solid;
+	padding: 				2px;
+}
+	
+.head a:link, 
+.head a:visited {
+	color: 					#333;
+}
+
+.xoopsbanner {
+	font-size: 				80%;
+	text-align: 			center;
+	margin-left: 			auto;
+	margin-right: 			auto;
+	margin-top: 			10px;
+	border-top: 			1px dotted;
+	height: 				65px;
+	padding: 				5px;
+	overflow: 				hidden;
+}
+
+/*
+ * From http://www.positioniseverything.net/easyclearing.html
+ */
+.clear:after {
+    content: 				"."; 
+    display: 				block; 
+    height: 				0; 
+    clear: 					both; 
+    visibility: 			hidden;
+}
+.clear {					
+	display: 				inline-table;
+}
+/* Hides from IE-mac \*/
+* html .clear {
+	height: 				1%;
+}
+.clear {
+	display: 				block;
+}
+/* End hide from IE-mac */
+
+/* color -- dropdown menu for Forum */
+div.dropdown a, 
+div.dropdown .menubar a{
+	color:					#FFFFFF !important;
+}
+
+div.dropdown .menu, 
+div.dropdown .menubar, 
+div.dropdown .item, 
+div.dropdown .separator{
+	background-color: 		#99B5CC !important;
+	color:					#FFFFFF !important;
+}
+
+div.dropdown .separator{
+	border: 				1px inset #e0e0e0 !important;
+}
+
+div.dropdown .menu a:hover, 
+div.dropdown .userbar a:hover{
+	color: 					#fff !important;
+}
+/* color - end */

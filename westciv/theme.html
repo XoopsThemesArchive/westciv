@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<title><{$xoops_sitename}><{if $xoops_pagetitle}> - <{$xoops_pagetitle}><{/if}></title>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_pagetitle}>, <{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_pagetitle}>, <{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<{$xoops_module_header}>
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_themecss}>" />
+<link rel="alternate" type="application/rss+xml" title="News RSS" href="<{$xoops_url}>/backend.php" />
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+
+</head>
+<body>
+
+<{if $xoops_lblocks OR $xoops_rblocks}>
+<div class="xoops-main-side">
+<{else}>
+<div>
+<{/if}>
+
+<div id="xoops-header">
+
+	<!-- Site name and slogan -->
+	<div onclick="window.location.href='<{$xoops_url}>'" class="xoops-logo"><span class="xoops-sitename"><{$xoops_sitename}></span>
+	<span class="xoops-slogan"><{$xoops_slogan}></span>
+	</div>
+
+	<!-- Meta navigation -->
+	<div id="xoops-meta-nav">
+		<ul title="Top Level Navigation bar">
+			<li><a href="<{$xoops_url}>/modules/wfchannel/" title="About XOOPS">关于我们</a></li>
+			<li><a href="<{$xoops_url}>/modules/contact/" title="Contact us">联系我们</a></li>
+			<li><a href="<{$xoops_url}>/modules/sitemap/" title="Sitemap">网站结构</a></li>
+			<li><a href="<{$xoops_url}>/">&nbsp; </a></li>
+			<li>
+		    <{if $xoops_isadmin}>
+		    <a href="<{$xoops_url}>/user.php" title="User Profile">资料</a> | <a href="<{$xoops_url}>/user.php?op=logout" title="Logout">退出 | <a href="<{$xoops_url}>/admin.php" title="Administration">管理</a>
+		    <{elseif $xoops_isuser}>
+		    <a href="<{$xoops_url}>/user.php" title="User Profile">资料</a> | <a href="<{$xoops_url}>/user.php?op=logout" title="Logout">退出</a>
+		    <{else}>
+		    <a href="<{$xoops_url}>/register.php" title="Register">注册</a> | <a href="<{$xoops_url}>/user.php" title="Logon">登录</a>
+		    <{/if}> 
+			</li>
+		</ul>
+	</div>	
+	
+	<!-- Horizontal menu tabs -->
+	<!-- 
+		该部分利用内部全局变量 $xoops_dirname 判断当前页面所属模块。需要注意: 所有菜单需要手工加入。
+		利用javascript实现字体的实时缩放。注意: 初始字体大小需要分别在style.css和javascript中设定(需要保持一致); style.css中的字体需要用相对大小 #%。
+	--> 
+		
+	<ul class="xoops-site-nav">
+		<li><a href="<{$xoops_url}>/" <{if $xoops_dirname eq "system" OR $xoops_dirname eq ""}>class="current"<{/if}> >首页</a></li>
+		<li><a href="<{$xoops_url}>/modules/newbb/" <{if $xoops_dirname eq "newbb"}>class="current"<{/if}> >论坛</a></li>
+		<li><a href="<{$xoops_url}>/modules/wfdownloads/"<{if $xoops_dirname eq "wfdownloads"}>class="current"<{/if}> >下载</a></li>
+		<li><a href="<{$xoops_url}>/modules/article/" <{if $xoops_dirname eq "article"}>class="current"<{/if}> >文章</a></li>
+		<li><a href="<{$xoops_url}>/modules/news/" <{if $xoops_dirname eq "news"}>class="current"<{/if}> >新闻</a></li>
+		<li><a href="<{$xoops_url}>/modules/wordpress/" <{if $xoops_dirname eq "wordpress"}>class="current"<{/if}> >Blog</a></li>
+		<li><a href="<{$xoops_url}>/modules/mediawiki/" <{if $xoops_dirname eq "mediawiki"}>class="current"<{/if}> >mediawiki</a></li>
+		<li><a href="<{$xoops_url}>/search.php">搜索</a></li>
+		<li><a href="javascript: void changeFontSize(10);" title="增大字体">+</a></li> 
+		<li><a href="javascript: void changeFontSize(0);" title="字体复原">|</a></li>
+		<li><a href="javascript: void changeFontSize(-10);" title="减小字体">-</a></li>
+		<!-- xlanguage plugin -->
+		<li><div style="padding-left: 10px;"><{$smarty.const.XLANGUAGE_SWITCH_CODE}></div></li>
+  	</ul>
+</div>
+
+<div id="xoops-content" class="clear"
+<{php}>if(!empty($_COOKIE["fsc"]))	echo 'style="font-size:'.$_COOKIE["fsc"].'"';<{/php}>
+>
+
+	<!-- Maintext -->
+	<div id="xoops-maintext">
+        
+			<!-- XOOPS main content -->
+        	<{if trim($xoops_contents) }>
+			<div class="blocktitle"><{$xoops_pagetitle}></div>
+			<div class="xoops-contents"><{$xoops_contents}></div>
+			<div class="clear"></div>
+			<{/if}>
+				
+			<!-- center-center blocks -->
+            <{foreach item=block from=$xoops_ccblocks}>
+				<div class="blocktitle"><{$block.title}></div>
+				<div class="blockcontent"><{$block.content}></div>
+            <{/foreach}>
+
+			<!-- center-left blocks -->
+              <{foreach item=block from=$xoops_clblocks}>
+				<div class="blocktitle"><{$block.title}></div>
+				<div class="blockcontent"><{$block.content}></div>
+              <{/foreach}>
+
+			<!-- center-right blocks -->
+              <{foreach item=block from=$xoops_crblocks}>
+				<div class="blocktitle"><a name="content"></a><{$block.title}></div>
+				<div class="blockcontent"><{$block.content}></div>
+              <{/foreach}>
+			
+			<!-- XOOPS banner -->
+			<div class="xoopsbanner"><span><{$xoops_banner}></span></div>
+			
+			<div class="clear"></div>
+			
+	</div>
+			
+	<!-- Sidebar -->
+	<div id="xoops-sidebar">
+
+		<!-- Start left blocks loop -->
+        <{foreach item=block from=$xoops_lblocks}>
+			<div class="xoops-sidebar-nav">
+				<div id="leftcolumn"><div class="blocktitle"><{$block.title}></div></div>
+				<div class="blockcontent"><{$block.content}></div>
+			</div>
+        <{/foreach}>
+        <!-- End left blocks loop -->
+	
+        <!-- Start right blocks loop -->
+        <{foreach item=block from=$xoops_rblocks}>
+			<div class="xoops-sidebar-nav">
+				<div class="blocktitle"><{$block.title}></div>
+				<div class="blockcontent"><{$block.content}></div>
+			</div>
+        <{/foreach}>
+        <!-- End right blocks loop -->
+			
+	</div>
+
+	<!-- XOOPS footer -->
+	<div id="xoops-footer">
+		<div class="clear"></div>
+		<p id="foot-body">
+	<{$xoops_footer}>  |  Theme <a href="http://xoops.org.cn" title="">Xoops China</a>	| <a href="#xoops-header">Top</a>
+		</p>
+		<p id="foot-footer"><a href="http://validator.w3.org/check/referer" target="_blank">[XHTML 1.0]</a> <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">[CSS]</a></p>
+	</div>
+	
+	<div class="clear"></div>
+
+</div>
+
+</div>
+<script type="text/javascript">
+<!--
+var originalFontSize = '90%';
+
+function changeFontSize(fontIncrease)
+{
+	var newFontSize, currentFontSize;
+	var currentElement = xoopsGetElementById('xoops-content');
+	if(fontIncrease == 0) {
+		currentElement.style.fontSize = originalFontSize;
+		setCookie('fsc', 'null', -1);
+	}else{
+		currentFontSize = currentElement.style.fontSize;
+		if(!currentFontSize) {
+			var cookieFontSize = getCookie('fsc');
+			currentFontSize = cookieFontSize;
+			if(!currentFontSize) {
+				currentFontSize = originalFontSize;
+			}
+		}
+		currentFontSize = parseInt(currentFontSize);
+		newFontSize = currentFontSize + fontIncrease;
+		currentElement.style.fontSize = newFontSize + '%';
+		setCookie('fsc', currentElement.style.fontSize);
+	}
+} 
+
+function setCookie(name,value, days) {
+	if (days){
+		var date = new Date();
+		date.setTime(date.getTime()+(days*24*60*60*1000));
+		var expires = "; expires="+date.toGMTString();
+	}
+	else var expires = "";
+	document.cookie = name + "=" + escape(value) + expires + "; path=/";
+}
+function getCookie(name) {
+  var nameq = name + "=";
+  var c_ar = document.cookie.split(';');
+  for (var i=0; i<c_ar.length; i++) {
+    var c = c_ar[i];
+    while (c.charAt(0)==' ') c = c.substring(1,c.length);
+    if (c.indexOf(nameq) == 0) return unescape( c.substring(nameq.length, c.length) );
+  }
+  return null;
+}
+//-->
+</script>
+
+</body>
+
+</html>
